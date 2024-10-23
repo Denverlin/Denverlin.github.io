@@ -38,7 +38,6 @@ export default {
   flex-direction: column;
   max-width: 700px;
   gap: 30px;
-
   padding: 20px;
   border-radius: 20px;
   background: white;

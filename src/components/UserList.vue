@@ -33,11 +33,14 @@ export default {
 .user-list {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 500px;
   gap: 10px;
   align-items: stretch;
   margin: 0 auto;
   background: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
 
   :hover {
     cursor: pointer;

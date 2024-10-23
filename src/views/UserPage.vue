@@ -6,16 +6,16 @@
       </div>
       <div class="user-page__media">
         <div style="display:flex; flex-direction: column; gap: 100px">
-          <span>Альбомы</span>
+
           <UserAlbums :id="id"></UserAlbums>
         </div>
         <div style="display:flex; flex-direction: column; gap: 100px">
-          <span>Посты</span>
+
           <UserPosts :id="id"></UserPosts>
         </div>
       </div>
     </div>
-    <button @click="backToMenu">Back</button>
+    <button class="back-button" @click="backToMenu">Back</button>
   </div>
 </template>
 
@@ -47,5 +47,11 @@ export default {
     display: flex;
     justify-content: space-around;
   }
+}
+
+.back-button {
+  margin-top: 100px;
+  height: 50px;
+  width: 150px;
 }
 </style>
