@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carousel :autoplay="true" :perPage="5">
+    <carousel :perPage="5">
       <slide v-for="photo in photos" :key="photo.id">
         <img :src="photo.url" alt="" style="">
       </slide>

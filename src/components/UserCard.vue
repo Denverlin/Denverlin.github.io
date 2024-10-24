@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-for="user in users" v-if="user.id === id" class="user-card">
+    <div v-for="user in users" v-if="user.id == id" class="user-card">
       <div class="user-card__background"></div>
-      <div class="user-card__photo"></div>
+      <div class="user-card__photo"><img alt="" src="https://ex-beton.ru/images/home/client-say/00.jpg"></div>
       <div class="user-card__info">
         <div class="user-card__info__name">{{ user.name }}</div>
         <div class="user-card__info__username">{{ user.username }}</div>
@@ -17,14 +17,17 @@ export default {
   name: "UserCard",
   props: {
     id: {
-      type: Number,
+      type: [String, Number],
       required: true
     }
   },
   computed: {
     users() {
       return this.$store.state.users
-    }
+    },
+  },
+  created() {
+    this.$store.dispatch("fetchUsers")
   }
 }
 </script>
@@ -33,6 +36,8 @@ export default {
 .user-card {
   background: white;
   border-radius: 20px;
+  display: flex;
+  padding: 20px;
 
   &__info {
     height: 300px;

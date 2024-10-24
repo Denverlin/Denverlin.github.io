@@ -23,12 +23,11 @@ export default {
   components: {UserPhotos},
   props: {
     id: {
-      type: Number,
+      type: [String, Number],
       required: true
     }
   },
   mounted() {
-    console.log(this.id)
     this.$store.dispatch("fetchAlbums", this.id)
   },
   computed: {

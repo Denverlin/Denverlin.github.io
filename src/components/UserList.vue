@@ -18,8 +18,8 @@ export default {
   methods: {
 
     openProfile(id) {
-      this.$router.push({name: "UserPage", params: {id: id}})
-    }
+      this.$router.push({name: "UserPage", params: {id}})
+    },
   },
   computed: {
     users() {

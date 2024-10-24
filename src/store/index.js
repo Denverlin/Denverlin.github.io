@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axiosInstance from "@/api/index.js";
 import {getAlbumsPath, getPhotosPath, getPostsPath, USERS} from "@/api/routes.js"
+import {store} from "core-js/internals/reflect-metadata";
 
 
 Vue.use(Vuex)
@@ -11,7 +12,8 @@ export default new Vuex.Store({
         users: [],
         albums: [],
         photos: [],
-        posts: []
+        posts: [],
+        userID: Number
     },
 
     mutations: {
@@ -59,8 +61,7 @@ export default new Vuex.Store({
                 })
                 .catch(error => console.log(error))
         },
-
-
+      
     },
 
 })

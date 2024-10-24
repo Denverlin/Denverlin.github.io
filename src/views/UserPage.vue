@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="user-page">
+      <button class="back-button" @click="backToMenu">Back</button>
       <div class="user-page__card">
         <UserCard :id="id"></UserCard>
       </div>
@@ -15,7 +16,6 @@
         </div>
       </div>
     </div>
-    <button class="back-button" @click="backToMenu">Back</button>
   </div>
 </template>
 
@@ -35,8 +35,9 @@ export default {
   methods: {
     backToMenu() {
       this.$router.push("/")
-    }
-  }
+    },
+
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -50,7 +51,7 @@ export default {
 }
 
 .back-button {
-  margin-top: 100px;
+  margin-bottom: 100px;
   height: 50px;
   width: 150px;
 }

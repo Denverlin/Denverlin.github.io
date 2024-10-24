@@ -16,11 +16,12 @@ export default {
   name: "UserPosts",
   props: {
     id: {
-      type: Number,
+      type: [String, Number],
       required: true
     }
   },
   mounted() {
+
     this.$store.dispatch("fetchPosts", this.id)
   },
   computed: {
