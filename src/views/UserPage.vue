@@ -46,7 +46,8 @@ export default {
   &__media {
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
