@@ -1,8 +1,8 @@
 <template>
   <div>
-    <carousel :perPage="5">
+    <carousel :perPage="3">
       <slide v-for="photo in photos" :key="photo.id">
-        <img :src="photo.url" alt="" style="">
+        <img :src="photo.thumbnailUrl" alt="" style="">
       </slide>
     </carousel>
   </div>
